@@ -1,11 +1,17 @@
 " Some settings for vim
 " written by huibo.zhao
 
+" 语法高亮
+syntax on
+
 " 显示行数
 set nu
 
+" 距离边界5行自动滚动
+set so=5  
+
 " 设置配色方案
-:colorscheme elflord
+colorscheme elflord
 
 " 统一缩进为4
 set cindent
