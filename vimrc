@@ -1,36 +1,29 @@
-" Some settings for vim
-" written by huibo.zhao
+"Settings by hbzhao"
+colorscheme desert    " 颜色主题"
+filetype on           " 类型探测打开"
+filetype indent on    " 缩进打开"
+filetype plugin on    " 自动加载相关插件脚本"
+syntax on             " 语法高亮"
+set number            " 显示行数"
+set cursorcolumn      " 光标列高亮"
+set cursorline        " 光标行高亮"
+set nocompatible      " 不兼容vi模式"
+set nobackup          " 关闭备份文件"
+set noswapfile        " 关闭交换文件"
+set softtabstop=4     " 设置缩进宽度为4"
+set shiftwidth=4      " 设置缩进宽度为4"
+set laststatus=2      " 设置显示底行"
+set statusline=%m[%F]%y[%{&ff}]%*%=[%l:%c][%p%%]  " 底行内容"
+set encoding=utf-8                        " 显示消息时的编码"
+set termencoding=utf-8                    " 终端显示用的编码"
+set fileencoding=utf-8                    " 打开文件时的编码"
+set fileencodings=utf-8,cp936,gbk,ucs-bom " 打开文件尝试编码"
+set guifont=Consolas:h12:cANSI:qDRAFT     " 设置字体格式大小"
 
-" 语法高亮
-syntax on
+map <c-j> <c-w>j      " 下移窗口"
+map <c-k> <c-w>k      " 上移窗口"
+map <c-l> <c-w>l      " 右移窗口"
+map <c-h> <c-w>h      " 左移窗口"
 
-" 显示行数
-set nu
-
-" 距离边界5行自动滚动
-set so=5  
-
-" 设置配色方案
-colorscheme elflord
-
-" 统一缩进为4
-set cindent
-set softtabstop=4
-set shiftwidth=4
-
-" 总是显示状态行, 显示的内容(包括文件类型和解码)
-set laststatus=2
-set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
-
-" 显示中文
-let &termencoding=&encoding
-set fileencodings=utf-8,gbk,ucs-bom,cp936
-
-" 自定义的在不同窗口之间移动的快捷键
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
-
-" 映射;;为Esc键
-inoremap ;; <ESC>
+inoremap ;; <ESC>     " 快速模式"
+nnoremap QQ :qa!<CR>  " 快速退出"
